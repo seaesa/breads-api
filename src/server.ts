@@ -5,3 +5,5 @@ app.use(cors());
 app.get('/', (req: Request, res: Response) => res.json({ code: 200 }));
 
 app.listen(3000, () => console.log(`server running on http://localhost:3000`));
+
+export default app;

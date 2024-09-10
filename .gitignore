@@ -3,3 +3,10 @@
 /node_modules
 *.local
 .vercel
+
+
+# lock file
+pnpm-yaml.lock
+package-*.json
+bun.lockb
+yarn.lock

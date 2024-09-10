@@ -9,8 +9,7 @@
 		"moduleDetection": "force",
 		"strict": true,
 		"noUncheckedIndexedAccess": true,
-		"moduleResolution": "Bundler",
-		"module": "ESNext",
+		"module": "CommonJS",
 		"noEmit": true,
 		"lib": ["ES2016"],
 		"forceConsistentCasingInFileNames": true

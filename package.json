@@ -6,7 +6,7 @@
 	"scripts": {
 		"start": "node dist/index.js",
 		"dev": "nodemon",
-		"build": "tsc --preserveWatchOutput && esbuild src/server.ts --bundle --platform=node --outfile=dist/index.js --format=esm --packages=external",
+		"build": "esbuild src/server.ts --bundle --platform=node --outfile=dist/index.js --format=esm --packages=external",
 		"format": "prettier . --write",
 		"lint": "tsc"
 	},

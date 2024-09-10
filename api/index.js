@@ -1,1 +1,2 @@
-export * as default from '../dist/index';
+import app from '../src/server';
+export default app;

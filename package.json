@@ -8,8 +8,7 @@
 		"dev": "nodemon",
 		"build": "esbuild src/server.ts --bundle --platform=node --outfile=dist/index.js --format=esm --packages=external",
 		"format": "prettier . --write",
-		"lint": "tsc",
-		"vercel-build": "echo successfully"
+		"lint": "tsc"
 	},
 	"keywords": [],
 	"author": "seaesa",

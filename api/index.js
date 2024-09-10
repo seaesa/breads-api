@@ -1,1 +1,3 @@
-export { default } from '../dist/index';
+const app = require('../dist/index');
+
+module.exports = app;

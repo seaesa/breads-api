@@ -1,7 +1,7 @@
 {
 	"compilerOptions": {
 		"target": "ESNext",
-		"module": "ESNext",
+		"module": "CommonJS",
 		"outDir": "dist",
 		"esModuleInterop": true,
 		"forceConsistentCasingInFileNames": true,
@@ -12,9 +12,6 @@
 	"include": ["src/**/*.ts"],
 	"exclude": ["node_modules"],
 	"ts-node": {
-		"swc": true,
-		"compilerOptions": {
-			"module": "CommonJS"
-		}
+		"swc": true
 	}
 }

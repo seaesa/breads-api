@@ -1,12 +1,20 @@
 {
 	"compilerOptions": {
+		"target": "ESNext",
+		"module": "ESNext",
+		"outDir": "dist",
 		"esModuleInterop": true,
-		"skipLibCheck": true,
-		"target": "ES2016",
+		"forceConsistentCasingInFileNames": true,
 		"strict": true,
-		"module": "CommonJS",
-		"forceConsistentCasingInFileNames": true
+		"skipLibCheck": true,
+		"lib": ["ESNext"]
 	},
-	"include": ["./src/"],
-	"exclude": ["node_modules"]
+	"include": ["src/**/*.ts"],
+	"exclude": ["node_modules"],
+	"ts-node": {
+		"swc": true,
+		"compilerOptions": {
+			"module": "CommonJS"
+		}
+	}
 }

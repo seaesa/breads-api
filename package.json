@@ -2,11 +2,13 @@
 	"name": "breads-api",
 	"version": "1.0.0",
 	"main": "src/server.ts",
+	"type": "module",
 	"scripts": {
+		"start": "node dist/index.js",
 		"dev": "nodemon",
-		"start": "node dist/server.js",
-		"build": "tsc",
-		"format": "prettier . --write"
+		"build": "esbuild src/server.ts --bundle --platform=node --outfile=dist/index.js --format=esm --packages=external",
+		"format": "prettier . --write",
+		"lint": "tsc"
 	},
 	"keywords": [],
 	"author": "seaesa",
@@ -19,18 +21,16 @@
 		"express": "^4.19.2"
 	},
 	"devDependencies": {
-		"@swc/core": "^1.7.23",
 		"@types/cors": "^2.8.17",
 		"@types/dotenv": "^8.2.0",
 		"@types/express": "^4.17.21",
 		"@types/node": "^22.5.4",
+		"esbuild": "^0.23.1",
 		"husky": "^9.1.5",
 		"lint-staged": "^15.2.10",
 		"morgan": "^1.10.0",
 		"nodemon": "^3.1.4",
 		"prettier": "3.3.3",
-		"regenerator-runtime": "^0.14.1",
-		"ts-node": "^10.9.2",
 		"typescript": "^5.5.4"
 	},
 	"lint-staged": {

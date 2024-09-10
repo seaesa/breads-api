@@ -1,1 +1,1 @@
-export { default } from '../dist/index';
+export * as default from '../dist/index';

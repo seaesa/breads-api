@@ -1,17 +1,24 @@
 {
 	"name": "breads-api",
+	"description": "api for breads website",
 	"version": "1.0.0",
-	"main": "src/server.ts",
+	"main": "dist/server.js",
+	"keywords": [
+		"breads"
+	],
+	"author": "seaesa",
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/seaesa/breads-api.git"
+	},
+	"homepage": "https://github.com/seaesa/breads-api",
+	"license": "MIT",
 	"scripts": {
 		"start": "node dist/server.js",
 		"dev": "nodemon",
-		"build": "tsc",
-		"format": "prettier . --write"
+		"build": "swc ./src/ -d dist --strip-leading-paths --config-file .swcrc",
+		"format": "lint-staged"
 	},
-	"keywords": [],
-	"author": "seaesa",
-	"license": "ISC",
-	"description": "",
 	"dependencies": {
 		"brcypt": "^1.0.1",
 		"cors": "^2.8.5",
@@ -19,6 +26,7 @@
 		"express": "^4.19.2"
 	},
 	"devDependencies": {
+		"@swc/cli": "^0.4.0",
 		"@swc/core": "^1.7.23",
 		"@types/cors": "^2.8.17",
 		"@types/dotenv": "^8.2.0",
@@ -29,11 +37,6 @@
 		"morgan": "^1.10.0",
 		"nodemon": "^3.1.4",
 		"prettier": "3.3.3",
-		"regenerator-runtime": "^0.14.1",
-		"ts-node": "^10.9.2",
 		"typescript": "^5.5.4"
-	},
-	"lint-staged": {
-		"**/*": "prettier --write --ignore-unknown"
 	}
 }

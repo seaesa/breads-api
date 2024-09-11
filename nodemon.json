@@ -2,6 +2,6 @@
 	"watch": ["src", "*.json"],
 	"ignore": ["src/**/*.test.ts", "node_modules"],
 	"ext": "ts,mjs,js,json,graphql",
-	"exec": "npm run build && node dist/server.js",
+	"exec": "ts-node src/server.ts",
 	"legacyWatch": true
 }

@@ -1,7 +1,10 @@
 # Ignore artifacts:
+node_modules
 build
 coverage
 dist
 *.md
 *.http
 *.rest
+*.svg
+*.env
